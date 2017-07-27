@@ -1,0 +1,11 @@
+.container, .container-fluid {
+    padding: 0 45px;
+}
+
+code {
+    background-color: blue;
+}
+
+.table > tbody > tr.jorge > td, .table > thead th.jorge, .table > tbody td.magenta {
+    background-color: magenta;
+}

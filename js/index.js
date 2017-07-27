@@ -25,14 +25,14 @@
         $('<a>')
             .text('Example link')
             .attr('href', 'https://example.com')
-            .appendTo('body');
+            .appendTo('.container-fluid');
 
         let newParagraph = $('<p>')
             .text('<p>Texto del parrafo</p>')
-            .appendTo('body');
+            .appendTo('.container-fluid');
 
         let jQueryAnchor = $('<a>')
-            .appendTo('body');
+            .appendTo('.container-fluid');
 
         // Asignar variables a los elementos/selectores de jQuery...
         let coconutHeadImage = $('<img>')
