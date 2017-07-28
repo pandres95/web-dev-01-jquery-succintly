@@ -17,10 +17,6 @@
     $(document).ready(() => {
         console.log('document#onload', $('a'));
 
-        $('a')
-            .text('Este es un link') // DOMElement.innerText
-            .attr('href', 'https://pandres95.me');
-
         // Podemos crear elements usando jQuery
         $('<a>')
             .text('Example link')
