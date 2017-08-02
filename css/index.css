@@ -1,5 +1,9 @@
-.container, .container-fluid {
-    padding: 0 45px;
+.container {
+    margin-top: 4em;
+}
+
+.input-group {
+    margin-bottom: 1em;
 }
 
 code {

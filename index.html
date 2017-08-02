@@ -2,220 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
-    <script src="js/index.js" charset="utf-8"></script>
-    <script src="js/variables.js" charset="utf-8"></script>
-    <script src="js/try-catch.js" charset="utf-8"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/forms.js" charset="utf-8"></script>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-1">1</div>
-                <div class="col-lg-1">2</div>
-                <div class="col-lg-1">3</div>
-                <div class="col-lg-1">4</div>
-                <div class="col-lg-1">5</div>
-                <div class="col-lg-1">6</div>
-                <div class="col-lg-1">7</div>
-                <div class="col-lg-1">8</div>
-                <div class="col-lg-1">9</div>
-                <div class="col-lg-1">10</div>
-                <div class="col-lg-1">11</div>
-                <div class="col-lg-1">12</div>
-            </div>
-            <div class="row">
-                <!-- desde lg (1200px) col-lg-* -->
-                <!-- desde md (960px) col-md-* -->
-                <!-- desde md (768px) col-sm-* -->
-                <!-- desde md (0px) col-xs-* -->
-                <div class="col-md-6 col-xs-4">mitad</div>
-                <div class="col-md-6 col-xs-4">mitad</div>
-                <div class="col-md-12 col-xs-4">completo</div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">7</div>
-                <div class="col-lg-4">8</div>
-                <div class="col-lg-4">9</div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">10</div>
-                <div class="col-lg-4">11</div>
-                <div class="col-lg-4">12</div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">13</div>
-                <div class="col-lg-4">14</div>
-                <div class="col-lg-4">15</div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">16</div>
-                <div class="col-lg-4">17</div>
-                <div class="col-lg-4">18</div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">19</div>
-                <div class="col-lg-4">20</div>
-                <div class="col-lg-4">21</div>
-            </div>
+    <div class="container">
+        <div class="row">
+            <form id="login-form" class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
+                <div class="input-group">
+                    <label for="email">Correo electrónico</label>
+                    <input class="form-control" name="email" type="email" placeholder="Correo electrónico">
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input class="form-control" name="password" type="password" placeholder="Contraseña">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-success" type="submit">Enviar</button>
+                    <button class="btn btn-primary">Limpiar</button>
+                </div>
+            </form>
         </div>
-        <h1>
-            Título 1 <br>
-            <small>Subtítulo 1</small>
-        </h1>
-        <p class="lead">
-            Este es el párrafo más representativo de nuestro artículo
-        </p>
-        <p>
-            Lorem <ins>ipsum</ins> <del>dolor</del> sit <mark>amet</mark>, consectetur <u>adipisicing</u> elit, <small>sed</small> do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <address>
-            <strong>Twitter, Inc.</strong><br>
-            1355 Market Street, Suite 900<br>
-            San Francisco, CA 94103<br>
-            <abbr title="Phone">P:</abbr> (123) 456-7890
-        </address>
-
-        <blockquote class="blockquote-reverse">
-            "La imaginación es más importante que el conocimiento" — Albert Einstein
-        </blockquote>
-
-        <ul>
-            <li>Huevos</li>
-            <li>Leche</li>
-            <li>Mantequilla</li>
-        </ul>
-
-        <ol class="list-unstyled">
-            <li>Primero</li>
-            <li>Segundo</li>
-        </ol>
-
-        <ul class="list-inline">
-            <li><a href="">Home</a></li>
-            <li><a href="">Team</a></li>
-            <li><a href="">About</a></li>
-        </ul>
-
-        <dl class="dl-horizontal">
-            <dt>Concepto</dt>
-            <dd>Descripción</dd>
-        </dl>
-        <dl class="dl-horizontal">
-            <dt>Concepto 2</dt>
-            <dd>Descripción 2</dd>
-        </dl>
-
-        <code>2 + 2 = pez</code>
-
-        <p>
-            <kbd>⌘ + S</kbd> es para guardar
-        </p>
-
-        <pre>
-            ($ => {
-                // Esto es un comentario dentro de un lambda en javascript
-            })();
-        </pre>
-
-        <div class="table-responsive">
-            <table class="table table-condensed">
-                <thead>
-                    <tr>
-                        <th class="jorge">Concepto</th>
-                        <th>Descripción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="active">
-                        <td>1</td>
-                        <td>Uno / 一</td>
-                    </tr>
-                    <tr class="success">
-                        <td>2</td>
-                        <td>Dos / 二</td>
-                    </tr>
-                    <tr class="danger">
-                        <td>3</td>
-                        <td>Tres</td>
-                    </tr>
-                    <tr class="warning">
-                        <td>4</td>
-                        <td>Cuatro</td>
-                    </tr>
-                    <tr class="info">
-                        <td>5</td>
-                        <td>Cinco</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Fibonacci number</label>
-                <input type="text" class="form-control" id="fibo" placeholder="Fibonacci number">
-            </div>
-
-            <a href="#" id="fibo-button" class="btn btn-default">Submit</a>
-        </form>
-
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <input type="file" id="exampleInputFile">
-                <p class="help-block">Example block-level help text here.</p>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> Check me out
-                </label>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-
-        <form class="form-inline">
-            <div class="form-group">
-                <label for="exampleInputName2">Name</label>
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail2">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-            </div>
-            <button type="submit" class="btn btn-default">Send invitation</button>
-        </form>
-
-        <a class="btn btn-default" href="#" role="button">Link</a>
-        <button class="btn btn-succes btn-lg" type="submit">Button</button>
-        <input class="btn btn-danger btn-sm" type="button" value="Input">
-        <input class="btn btn-info btn-xs btn-block" type="submit" value="Submit">
-        <div class="btn btn-success checkbox" disabled>
-            <label>
-                <input type="checkbox"> Check me out
-            </label>
-        </div>
-
-        <h2>Título 2 <small>Subtítulo 2</small></h2>
-        <h3>Título 3 <small>Subtítulo 3</small></h3>
-        <h4>Título 4 <small>Subtítulo 4</small></h4>
-        <h5>Título 5 <small>Subtítulo 5</small></h5>
-        <h6>Título 6 <small>Subtítulo 6</small></h6>
     </div>
 </body>
 </html>
