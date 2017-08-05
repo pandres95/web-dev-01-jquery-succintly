@@ -49,10 +49,51 @@
     class LoginForm extends Form {
         constructor () { super('login-form'); }
 
+        /* function a () -> Promise
+            1. a().then(function(result) { }).catch(function(error) { });
+            2. async function () {
+                try {
+                    let result = await a();
+                } catch (error) {
+                    // Error
+                }
+            }
+        */
+
         submit() {
             // Here we insert the submit operation code
+            $.ajax('https://api.example.com/auth/token', {
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                data: $.param({
+                    'grant_type': 'password',
+                    'client_id': '***',
+                    'client_secret': '****',
+                    username: this.email,
+                    password: this.password
+                })
+            }).then(function(login) {
+                return $.ajax('https://api.agentowl.me/users/me', {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${login.access_token}`
+                    }
+                });
+            }).then(user => {
+                console.log(user);
+            }).catch (error => {
+                $('<div class="alert"></div>')
+                    .text(error.message)
+                    .appendTo('body');
+            });
         }
     }
 
-    $(() => new LoginForm());
+    $(() => {
+        new LoginForm();
+        $('.container a').toggleClass('active');
+    });
+
 })(window.jQuery);

@@ -11,25 +11,27 @@
 
     <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="js/forms.js" charset="utf-8"></script>
+    <script src="js/project1.js" charset="utf-8"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <form id="login-form" class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
-                <div class="input-group">
-                    <label for="email">Correo electrónico</label>
-                    <input class="form-control" name="email" type="email" placeholder="Correo electrónico">
+    <div id="main" class="container">
+        <form id="chat-form" class="form-inline">
+            <label for="txtChat">Qué estas pensando?</label>
+            <input type="text" class="form-control" name="txtChat" placeholder="Ingrese un texto">
+            <input type="submit"  class="btn btn-success" value="Enviar">
+        </form>
+        <div id="chat-body">
+            <div id="content" class="container">
+                <div class="entrada row">
+                    <p>Bienvenido Sr X, Como se encuentra en el día de hoy?</p>
                 </div>
-                <div class="input-group">
-                    <label for="password">Contraseña</label>
-                    <input class="form-control" name="password" type="password" placeholder="Contraseña">
+                <div class="entrada row">
+                    <p>Bienvenido Sr X, Como se encuentra en el día de hoy?</p>
                 </div>
-                <div class="text-center">
-                    <button class="btn btn-success" type="submit">Enviar</button>
-                    <button class="btn btn-primary">Limpiar</button>
+                <div class="entrada row">
+                    <p>Bienvenido Sr X, Como se encuentra en el día de hoy?</p>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </body>
